@@ -1,0 +1,8 @@
+.ulcontainer{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.navcontainer{
+    justify-content: center;
+}

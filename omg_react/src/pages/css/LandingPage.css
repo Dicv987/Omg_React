@@ -1,0 +1,9 @@
+.header_nav{
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(40, 58, 90, 0.9);
+}
+
+.image{
+    padding: 15px;
+}

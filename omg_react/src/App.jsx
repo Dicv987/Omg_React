@@ -3,12 +3,9 @@ import {MyRoutes} from './routers/routes'
 
 function App(){
   return(
-    <div>
-      <header>
-        <h1>Prueba Header</h1>
-      </header>
+    <section>
       <MyRoutes/>
-    </div>
+    </section>
   );
 }
 export default App
