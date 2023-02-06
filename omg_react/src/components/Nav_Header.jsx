@@ -1,36 +1,19 @@
 import { Link } from "react-router-dom";
-import "./css/NavHeader.css"
+import { LandingPage } from "../pages/LandingPage.jsx";
+import Logo from "../img/logo.png";
+import "./css/NavHeader.css";
 
 export function NavHeader() {
   return (
-    <nav className="navcontainer">
-      <ul className="ulcontainer">
-        <Link to={"/"} >
-          <li>
-            <p>Inicio</p>
-          </li>
-        </Link>
-        <Link to={"/Ventajas"}>
-          <li>
-            <p>Quienes somos</p>
-          </li>
-        </Link>
-        <Link to={"/Ventajas"}>
-          <li>
-            <p>Ventajas</p>
-          </li>
-        </Link>
-        <Link to={"/Ventajas"}>
-          <li>
-            <p>Productos</p>
-          </li>
-        </Link>
-        <Link to={"/Ventajas"}>
-          <li>
-            <p>Contactos</p>
-          </li>
-        </Link>
-      </ul>
-    </nav>
+    <div className="container d-flex allign-items-center">
+      <h1 className="logo me-auto">
+        <a href={LandingPage}>
+          <img src={Logo} className="img-fluid" alt="Logo_image" />
+        </a>
+      </h1>
+      <nav id="navbar" className="navbar">
+        <h1>Prueba</h1>
+      </nav>
+    </div>
   );
 }
