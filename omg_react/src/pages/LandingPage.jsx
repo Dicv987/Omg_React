@@ -5,7 +5,6 @@ import { AcercaNosotros } from "../components/AcercaNosotros";
 import { MisVisVal } from "../components/MisVisVal";
 import { Footer } from "../components/Footer";
 
-import "./css/LandingPage.css";
 export function LandingPage() {
   return (
     <>
@@ -21,9 +20,9 @@ export function LandingPage() {
       <Footer />
       <a
         href="#"
-        class="back-to-top d-flex align-items-center justify-content-center"
+        className="back-to-top d-flex align-items-center justify-content-center"
       >
-        <i class="bi bi-arrow-up-short"></i>
+        <i className="bi bi-arrow-up-short"></i>
       </a>
     </>
   );
