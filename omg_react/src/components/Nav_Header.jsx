@@ -48,12 +48,12 @@ export function NavHeader( pagina ) {
               </a>
             </li>
             <li>
-              <a className={`${pagina.pagina === `Productos`? "nav-link active" : "nav-link"}`} href="/Productos">
+              <a className={`${pagina.pagina === `Productos`? "nav-link active" : "nav-link"}`} href="productos.html">
                 PRODUCTOS
               </a>
             </li>
             <li>
-              <a className={`${pagina.pagina === `Contacto`? "nav-link active" : "nav-link"}`} href="/Contacto">
+              <a className={`${pagina.pagina === `Contacto`? "nav-link active" : "nav-link"}`} href="contact.html">
                 CONTACTO
               </a>
             </li>
