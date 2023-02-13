@@ -4,7 +4,13 @@ import React, { useState, useEffect } from "react";
 
 export function NavHeader( pagina ) {
   const [scrolled, setScrolled] = useState(false);
+  const [navbarClass, setNavbarClass] = useState('');
+  const [buttonClass, setButtonClass] = useState('bi-list');
 
+  const handleMobileNavToggle = () => {
+    setNavbarClass(navbarClass === '' ? 'navbar-mobile' : '');
+    setButtonClass(buttonClass === 'bi-list' ? 'bi-x' : 'bi-list');
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -16,22 +22,21 @@ export function NavHeader( pagina ) {
     });
   }, []);
 
-  console.log(pagina)
 
   return (
     <header
       id="header"
       className={`fixed-top ${scrolled ? "header-scrolled" : ""}`}
-      style={{ background: "#37517e" }}
+      style={{ background: "#37517e" }} 
     >
       <div className="container d-flex allign-items-center">
         <h1 className="logo me-auto">
           <a href="/">
             <img src={Logo} className="img-fluid" alt="Logo_image" />
           </a>
-        </h1>
-        <nav id="navbar" className="navbar">
-          <ul>
+        </h1>   
+        <nav id="navbar" className={`navbar ${navbarClass === "" ? "" : "navbar-mobile"}`}>
+          <ul>  
             <li>
               <a className={`${pagina.pagina === `Inicio`? "nav-link active" : "nav-link"}`} href="/">
                 INICIO
@@ -58,8 +63,8 @@ export function NavHeader( pagina ) {
               </a>
             </li>
           </ul>
-          <i className="bi bi-list mobile-nav-toggle"></i>
-        </nav>
+          <i className={`bi ${buttonClass} mobile-nav-toggle`} onClick={handleMobileNavToggle}></i>        
+          </nav>
       </div>
       <a href="#" className={`back-to-top d-flex align-items-center justify-content-center ${scrolled ? "active" : " "}`}><i class="bi bi-arrow-up-short"></i></a>
 
