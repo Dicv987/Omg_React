@@ -27,8 +27,8 @@ export function NavHeader( pagina ) {
     <header
       id="header"
       className={`fixed-top ${scrolled ? "header-scrolled" : ""}`}
-      style={{ background: "#37517e" }} 
-    >
+      style={{ background: scrolled ? "rgba(40, 58, 90, 0.9)" : "#37517e" }}
+      >
       <div className="container d-flex allign-items-center">
         <h1 className="logo me-auto">
           <a href="/">

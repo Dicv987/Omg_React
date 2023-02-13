@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import GLightbox from 'glightbox';
 
 export function Portafolio() {
   const [activeFilter, setActiveFilter] = useState("*");
+
+  useEffect(() => {
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  }, []);
 
   const handleClick = (event) => {
     setActiveFilter(event.target.dataset.filter);
@@ -71,7 +78,7 @@ export function Portafolio() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <div className={`col-lg-4 col-md-6 portfolio-item filter-electrico ${activeFilter === ".filter-electrico" || activeFilter === "*" ? "" : 'd-none'}`}>
+          <div className={`col-lg-4 col-md-6 portfolio-item filter-electrico  ${activeFilter === ".filter-electrico" || activeFilter === "*" ? "" : 'd-none'}`}>
             <div className="portfolio-img">
               <img
                 src="src/img/portfolio/ELECTRICO/AP8X40CM_PVC.png"
@@ -85,8 +92,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/AP8X40CM_PVC.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="AP8X40CM_PVC"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -106,8 +113,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/AP10X60_PVC.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="AP10X60_PVC"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -127,8 +134,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/AYT84A.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="AYT84A"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -148,8 +155,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/AYT84B.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="AYT84B"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -169,8 +176,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/CONICO_50X60CM.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="CONICO_50X60CM"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -190,8 +197,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/MANHOLE_HD.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="MANHOLE HD"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -211,8 +218,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/MINIMANHOLE_HD.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="MINIMANHOLE HD"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -232,8 +239,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/RBTA1.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="RBTA1"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -253,8 +260,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/RBTA2.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="RBTA2"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -274,8 +281,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/RBTB1.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="RBTB1"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -295,8 +302,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/RBTB2.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="RBTB2"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -316,8 +323,8 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/ELECTRICO/REG._1.15X1.15X1.0CM.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
-                title="Nombre de producto"
+                className="portfolio-lightbox preview-link glightbox"
+                title="REG. 1.15X1.15X1.0CM"
               >
                 <i className="bx bx-plus"></i>
               </a>
@@ -338,7 +345,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/VIALIDADES/GUIA_TACTIL_CAMBIO_DE_DIRECCION.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="GUIA TACTIL CAMBIO DE DIRECCION"
               >
                 <i className="bx bx-plus"></i>
@@ -359,7 +366,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/VIALIDADES/GUIA_TACTIL_LINEAL.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="GUIA TACTIL LINEAL"
               >
                 <i className="bx bx-plus"></i>
@@ -381,7 +388,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/TELECOMUNICACIONES/AP_12_CUBETA.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="AP 12 CUBETA"
               >
                 <i className="bx bx-plus"></i>
@@ -402,7 +409,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/TELECOMUNICACIONES/L1T.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="L1T"
               >
                 <i className="bx bx-plus"></i>
@@ -423,7 +430,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/TELECOMUNICACIONES/L2T.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="L2T"
               >
                 <i className="bx bx-plus"></i>
@@ -444,7 +451,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/TELECOMUNICACIONES/L3T.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="L3T"
               >
                 <i className="bx bx-plus"></i>
@@ -465,7 +472,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/TELECOMUNICACIONES/MANHOLE_CP.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="MANHOLE CP"
               >
                 <i className="bx bx-plus"></i>
@@ -486,7 +493,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/TELECOMUNICACIONES/MINIMANHOLE_CP.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="MINIMANHOLE_CP"
               >
                 <i className="bx bx-plus"></i>
@@ -508,7 +515,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/BYT_CIEGO.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="BYT CIEGO"
               >
                 <i className="bx bx-plus"></i>
@@ -529,7 +536,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/BYT6RESP.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="BYT6RESP"
               >
                 <i className="bx bx-plus"></i>
@@ -550,7 +557,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/CAJA_DE_VALVULAS_50X50CM_CON_BISAGRA.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="CAJA DE VALVULAS 50X50CM CON BISAGRA"
               >
                 <i className="bx bx-plus"></i>
@@ -571,7 +578,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/CAJA_DE_VALVULAS_50X50CM_SIN_BISAGRA.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="CAJA DE VALVULAS 50X50CM SIN BISAGRA"
               >
                 <i className="bx bx-plus"></i>
@@ -592,7 +599,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/PLACA_DE_SENALIZACION_40X40CM.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="PLACA DE SEÑALIZACION 40X40CM"
               >
                 <i className="bx bx-plus"></i>
@@ -613,7 +620,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/Rejilla50X50CM.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="Rejilla 50X50CM"
               >
                 <i className="bx bx-plus"></i>
@@ -634,7 +641,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/Rejilla60X40CM.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="Rejilla 60X40CM"
               >
                 <i className="bx bx-plus"></i>
@@ -655,7 +662,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/Rejilla70X60CM.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="Rejilla 70X60CM"
               >
                 <i className="bx bx-plus"></i>
@@ -676,7 +683,7 @@ export function Portafolio() {
               <a
                 href="src/img/portfolio/BYT/TOPE_DE_ESTACIONAMIENTO.png"
                 data-gallery="portfolioGallery"
-                className="portfolio-lightbox preview-link"
+                className="portfolio-lightbox preview-link glightbox"
                 title="TOPE DE ESTACIONAMIENTO"
               >
                 <i className="bx bx-plus"></i>

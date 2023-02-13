@@ -6,7 +6,7 @@ export function Productos() {
     <>
       <NavHeader pagina="Productos" />
 
-      <main id="main" style={{ marginTop: "50px" }}>
+      <main id="main" aria-hidden="true" style={{ marginTop: "50px" } }>
         <Portafolio />
       </main>
       <Footer />
